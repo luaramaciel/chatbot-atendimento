@@ -1,71 +1,30 @@
-# Chatbot com IA Generativa 🚧
-
+# Chatbot de Atendimento com IA Generativa e Logs Inteligentes 🚧
 ## Descrição
-
-Chatbot desenvolvido com Python e FastAPI, integrado com a API da OpenAI para gerar respostas inteligentes usando IA generativa. As conversas são armazenadas em um banco de dados SQLite.
-
----
-
-## Tecnologias utilizadas
-
-- Python 3.10+
-- FastAPI
-- Uvicorn (servidor ASGI)
-- SQLite (banco de dados leve e simples)
-- OpenAI API (GPT-3.5 turbo)
-- python-dotenv (para gerenciar variáveis de ambiente)
-
----
+Projeto Full Stack simples que integra um backend em Python (FastAPI) com uma API de IA generativa da OpenAI e um frontend básico em HTML + JavaScript. Permite ao usuário fazer perguntas ao chatbot, receber respostas geradas pela IA e salvar o histórico das conversas em um banco SQLite.
 
 ## Funcionalidades
 
-- Servidor FastAPI com rotas REST
-- Integração com OpenAI para gerar respostas em linguagem natural
-- Armazenamento de conversas em SQLite para manter contexto
-- Endpoint `/chat` que recebe mensagens e retorna respostas da IA
-- Documentação automática das rotas via Swagger UI
+### Backend (FastAPI + SQLite)
+- Rota POST `/chat`: recebe a pergunta do usuário, envia para a OpenAI, salva pergunta e resposta no banco de dados, e retorna a resposta.
+- Rota GET `/logs`: retorna o histórico de conversas salvas no banco de dados.
+- Banco SQLite para armazenar conversas com colunas: id, pergunta, resposta e data/hora.
+- Tratamento básico de erros, como falha na API ou entrada vazia.
+
+### Frontend (HTML + JavaScript)
+- Formulário simples para o usuário digitar perguntas e enviar.
+- Exibição da resposta da IA logo após o envio.
+- Área para mostrar o histórico da conversa atual (opcional).
+- Feedback visual durante o carregamento da resposta.
 
 ---
 
-## Como rodar localmente
+## Tecnologias usadas
 
-### Pré-requisitos
-
-- Python 3.10 ou superior instalado
-- Conta e chave de API da OpenAI (https://platform.openai.com/account/api-keys)
-
-### Passos
-
-1. Clone este repositório:
-   
-   git clone https://github.com/luaramaciel/chatbot-atendimento.git  
-   cd chatbot-atendimento
-
-2. Crie e ative o ambiente virtual:
-   
-     python -m venv venv  
-     Windows :arrow_right: .\venv\Scripts\activate  
-     macOS/Linux :arrow_right: source venv/bin/activate
-
-3. Instale as dependências:
-   
-   pip install -r requirements.txt
-
-4. Crie um arquivo `.env` na raiz do projeto e adicione sua chave API da OpenAI:
-   
-   OPENAI_API_KEY=sua_chave_aqui
-
-5. Rode o servidor FastAPI:
-   
-   uvicorn main:app --reload
-
-6. Acesse a documentação da API em:
-   
-   http://127.0.0.1:8000/docs
+- [Python 3.10+](https://www.python.org/)
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [SQLite](https://www.sqlite.org/index.html)
+- [OpenAI API](https://platform.openai.com/docs/)
+- HTML5 e JavaScript (Vanilla)
+- [python-dotenv](https://pypi.org/project/python-dotenv/) para variáveis de ambiente
 
 ---
-
-## Endpoints principais
-
-- `GET /` – Rota de teste que retorna uma mensagem de boas-vindas.  
-- `POST /chat` – Envia uma mensagem para o chatbot e recebe uma resposta gerada pela IA.
