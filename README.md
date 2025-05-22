@@ -38,8 +38,8 @@ Este projeto é um chatbot backend desenvolvido com Python e FastAPI, integrado 
 
 1. Clone este repositório:
    
-   git clone https://github.com/luaramaciel/GITHUB.git  
-   cd GITHUB
+   git clone https://github.com/luaramaciel/chatbot-atendimento.git  
+   cd chatbot-atendimento
 
 2. Crie e ative o ambiente virtual:
    
