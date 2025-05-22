@@ -43,9 +43,9 @@ Chatbot desenvolvido com Python e FastAPI, integrado com a API da OpenAI para ge
 
 2. Crie e ative o ambiente virtual:
    
-  python -m venv venv  
-  Windows :arrow_right: .\venv\Scripts\activate  
-  macOS/Linux :arrow_right: source venv/bin/activate
+     python -m venv venv  
+     Windows :arrow_right: .\venv\Scripts\activate  
+     macOS/Linux :arrow_right: source venv/bin/activate
 
 3. Instale as dependências:
    
