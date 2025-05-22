@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este projeto é um chatbot backend desenvolvido com Python e FastAPI, integrado com a API da OpenAI para gerar respostas inteligentes usando IA generativa. As conversas são armazenadas em um banco de dados SQLite. O objetivo é construir um projeto júnior que demonstre conhecimentos em backend, banco de dados e IA.
+Chatbot desenvolvido com Python e FastAPI, integrado com a API da OpenAI para gerar respostas inteligentes usando IA generativa. As conversas são armazenadas em um banco de dados SQLite. O objetivo é construir um projeto júnior que demonstre conhecimentos em backend, banco de dados e IA.
 
 ---
 
