@@ -1,20 +1,13 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from chat_logic import gerar_resposta  # importa do outro módulo
+from chat_logic import chamar_openai
 
 app = FastAPI()
 
-# Rota básica
-@app.get("/")
-def read_root():
-    return {"message": "Olá, mundo!"}
+class PedidoPergunta(BaseModel):
+    pergunta: str
 
-# Define o formato esperado da requisição
-class Mensagem(BaseModel):
-    texto: str
-
-# Nova rota para conversar com a IA
-@app.post("/chat")
-def chat(mensagem: Mensagem):
-    resposta = gerar_resposta(mensagem.texto)
-    return {"resposta": resposta}
+@app.post("/perguntar")
+def receber_pergunta(pedido: PedidoPergunta):
+    resposta_ia = chamar_openai(pedido.pergunta)
+    return {"resposta": resposta_ia}
