@@ -1,8 +1,8 @@
-# Chatbot com IA Generativa
+# Chatbot com IA Generativa :construction:
 
 ## Descrição
 
-Este projeto é um chatbot backend desenvolvido com Python e FastAPI, integrado com a API da OpenAI para gerar respostas inteligentes usando IA generativa. As conversas são armazenadas em um banco de dados SQLite. O objetivo é construir um projeto júnior que demonstre conhecimentos em backend, banco de dados e IA.
+Este projeto é um chatbot backend desenvolvido com Python e FastAPI, integrado com a API da OpenAI para gerar respostas inteligentes usando IA generativa. As conversas são armazenadas em um banco de dados SQLite.
 
 ---
 
@@ -44,24 +44,23 @@ Este projeto é um chatbot backend desenvolvido com Python e FastAPI, integrado 
 2. Crie e ative o ambiente virtual:
    
    python -m venv venv  
-   ### Windows  
-   .\venv\Scripts\activate  
-   ### macOS/Linux  
-   source venv/bin/activate
+   Windows :arrow_right: .\venv\Scripts\activate  
 
-3. Instale as dependências:
+   macOS/Linux :arrow_right: source venv/bin/activate
+
+4. Instale as dependências:
    
    pip install -r requirements.txt
 
-4. Crie um arquivo `.env` na raiz do projeto e adicione sua chave API da OpenAI:
+5. Crie um arquivo `.env` na raiz do projeto e adicione sua chave API da OpenAI:
    
    OPENAI_API_KEY=sua_chave_aqui
 
-5. Rode o servidor FastAPI:
+6. Rode o servidor FastAPI:
    
    uvicorn main:app --reload
 
-6. Acesse a documentação da API em:
+7. Acesse a documentação da API em:
    
    http://127.0.0.1:8000/docs
 
