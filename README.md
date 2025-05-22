@@ -44,9 +44,9 @@ Este projeto é um chatbot backend desenvolvido com Python e FastAPI, integrado 
 2. Crie e ative o ambiente virtual:
    
    python -m venv venv  
-   # Windows  
+   ### Windows  
    .\venv\Scripts\activate  
-   # macOS/Linux  
+   ### macOS/Linux  
    source venv/bin/activate
 
 3. Instale as dependências:
